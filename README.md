@@ -6,22 +6,22 @@
 
 ## 📌 Table of Contents
 
-- <a href="#overview">Overview</a>
-- <a href="#Business-Problem">Business Problem</a>
-- <a href="#Dataset">Dataset</a>
-- <a href="#ToolsTechnologies">Tools & Technologies</a>
-- <a href="#Project-Structure">Project Structure</a>
-- <a href="#ETLPipelineHowItWorks">ETL Pipeline – How It Works</a>
-- <a href="#DataCleaningTransformation">Data Cleaning & Transformation</a>
-- <a href="#OutputSchema">Output Schema</a>
-- <a href="#Dashboard">Dashboard</a>
-- <a href="#KeyChallengesSolved">Key Challenges Solved</a>
-- <a href="#KeyInsightsEnabled">Key Insights Enabled</a>
-- <a href="#AuthorContact">Author & Contact</a>
+- ## overview
+- ## Business Problem
+- ## Dataset
+- ## Tools & Technologies
+- ## Project Structure
+- ## ETL Pipeline – How It Works
+- ## Data Cleaning & Transformation
+- ## Output Schema
+- ## Dashboard
+- ## Key Challenges Solved
+- ## Key Insights Enabled
+- ## Author & Contact
 
 ---
 
-<h2><a class="anchor" id="overview"></a>Overview</h2>
+[Overview](#overview)
 
 This project automates the full data pipeline for **Ananymous Pvt. Ltd.**, an agricultural inputs distributor dealing in Chemicals and Fertilizer. Raw semi-structured Excel reports exported from Tally Prime ERP are cleaned, transformed, and loaded into a unified PostgreSQL table — which feeds a Power BI dashboard for business decision-making.
 
@@ -29,7 +29,7 @@ This project automates the full data pipeline for **Ananymous Pvt. Ltd.**, an ag
 
 ---
 
-<h2><a class="anchor" id="Business-Problem"></a>Business Problem</h2>
+[Business Problem](#business-problem)
 
 Sales and return data at Ananymous Pvt Ltd lived entirely inside Tally ERP exports — semi-structured Excel files with merged rows, 9-row header offsets, nested voucher-item groupings, and split GST columns. There was no clean, queryable store.
 
@@ -43,14 +43,14 @@ This meant:
 
 ---
 
-<h2><a class="anchor" id="Dataset"></a>Dataset</h2>
+[Dataset](#dataset)
 
 - **Source:** Tally Prime ERP → Excel export (`.xlsx`), 4 file types
 - **Format:** Semi-structured with 9 header rows, hierarchical voucher→item row layout
 
 ---
 
-<h2><a class="anchor" id="ToolsTechnologies"></a>Tools & Technologies</h2>
+[Tools & Technologies](#tools--technologies)
 
 - **Python** (Pandas, NumPy, SQLAlchemy, os, shutil)
 - **PostgreSQL** (Data warehouse, unified `sales_transactions` table)
@@ -61,7 +61,7 @@ This meant:
 
 ---
 
-## Project Structure
+[Project Structure](#project-structure)
 
 ```
 erp-data-analytics-pipeline/
@@ -84,7 +84,7 @@ erp-data-analytics-pipeline/
 
 ---
 
-<h2><a class="anchor" id="ETLPipelineHowItWorks"></a>ETL Pipeline – How It Works</h2>
+[ETL Pipeline – How It Works](#etl-pipeline--how-it-works)
 
 
 ```
@@ -117,7 +117,7 @@ Each script:
 
 ---
 
-<h2><a class="anchor" id="DataCleaningTransformation"></a>Data Cleaning & Transformation</h2>
+[Data Cleaning & Transformation](#data-cleaning--transformation)
 
 ### Parsing Tally's Hierarchical Export Format
 
@@ -162,7 +162,7 @@ df['dealer_name'] = df['dealer_name'].map(dealer_map)
 
 ---
 
-<h2><a class="anchor" id="OutputSchema"></a>Output Schema</h2>
+[Output Schema](#output-schema)
 
 ### Table: `sales_transactions`
 
@@ -181,7 +181,7 @@ df['dealer_name'] = df['dealer_name'].map(dealer_map)
 
 ---
 
-<h2><a class="anchor" id="Dashboard"></a>Dashboard</h2>
+[Dashboard](#dashboard)
 
 The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and provides:
 
@@ -190,11 +190,10 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 - Product discount vs. cash discount trend tracking
 - Net revenue estimation after returns
 
-> 📸 *Dashboard screenshot — add `images/dashboard.png` to the repo*
 
 ---
 
-<h2><a class="anchor" id="KeyChallengesSolved"></a>Key Challenges Solved</h2>
+[Key Challenges Solved](#key-challenges-solved)
 
 - **Tally's non-tabular export format** — hierarchical voucher/item rows parsed using conditional row-level filtering and `.ffill()` logic; no standard tabular read worked out of the box
 - **Two discount types in the same report** — product-level and voucher-level discounts isolated and computed independently
@@ -205,7 +204,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 ---
 
 
-<h2><a class="anchor" id="KeyInsightsEnabled"></a>Key Insights Enabled</h2>
+[Key Insights Enabled](#key-insights-enabled)
 
 - Which dealers have the highest return rates by product category?
 - Are cash discounts being given disproportionately to low-volume dealers?
@@ -215,7 +214,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 
 ---
 
-<h2><a class="anchor" id="AuthorContact"></a>Author & Contact</h2>
+[Author & Contact](#author--contact)
 
 **Thirumala Reddy**  
 Data Analyst — Nakasa Crop Science Pvt. Ltd.  
