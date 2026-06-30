@@ -6,22 +6,21 @@
 
 ## 📌 Table of Contents
 
-- ## overview
-- ## Business Problem
-- ## Dataset
-- ## Tools & Technologies
-- ## Project Structure
-- ## ETL Pipeline – How It Works
-- ## Data Cleaning & Transformation
-- ## Output Schema
-- ## Dashboard
-- ## Key Challenges Solved
-- ## Key Insights Enabled
-- ## Author & Contact
+- [Business Problem](#business-problem)
+- [Dataset](#dataset)
+- [Tools & Technologies](#tools--technologies)
+- [Project Structure](#project-structure)
+- [ETL Pipeline – How It Works](#etl-pipeline--how-it-works)
+- [Data Cleaning & Transformation](#data-cleaning--transformation)
+- [Output Schema](#output-schema)
+- [Dashboard](#dashboard)
+- [Key Challenges Solved](#key-challenges-solved)
+- [Key Insights Enabled](#key-insights-enabled)
+- [Author & Contact](#author--contact)
 
 ---
 
-[Overview](#overview)
+### overview
 
 This project automates the full data pipeline for **Ananymous Pvt. Ltd.**, an agricultural inputs distributor dealing in Chemicals and Fertilizer. Raw semi-structured Excel reports exported from Tally Prime ERP are cleaned, transformed, and loaded into a unified PostgreSQL table — which feeds a Power BI dashboard for business decision-making.
 
@@ -29,7 +28,7 @@ This project automates the full data pipeline for **Ananymous Pvt. Ltd.**, an ag
 
 ---
 
-[Business Problem](#business-problem)
+### Business Problem
 
 Sales and return data at Ananymous Pvt Ltd lived entirely inside Tally ERP exports — semi-structured Excel files with merged rows, 9-row header offsets, nested voucher-item groupings, and split GST columns. There was no clean, queryable store.
 
@@ -43,14 +42,14 @@ This meant:
 
 ---
 
-[Dataset](#dataset)
+### Dataset
 
 - **Source:** Tally Prime ERP → Excel export (`.xlsx`), 4 file types
 - **Format:** Semi-structured with 9 header rows, hierarchical voucher→item row layout
 
 ---
 
-[Tools & Technologies](#tools--technologies)
+### Tools & Technologies
 
 - **Python** (Pandas, NumPy, SQLAlchemy, os, shutil)
 - **PostgreSQL** (Data warehouse, unified `sales_transactions` table)
@@ -61,7 +60,7 @@ This meant:
 
 ---
 
-[Project Structure](#project-structure)
+### Project Structure
 
 ```
 erp-data-analytics-pipeline/
@@ -84,7 +83,7 @@ erp-data-analytics-pipeline/
 
 ---
 
-[ETL Pipeline – How It Works](#etl-pipeline--how-it-works)
+### ETL Pipeline – How It Works
 
 
 ```
@@ -117,7 +116,7 @@ Each script:
 
 ---
 
-[Data Cleaning & Transformation](#data-cleaning--transformation)
+### Data Cleaning & Transformation
 
 ### Parsing Tally's Hierarchical Export Format
 
@@ -162,7 +161,7 @@ df['dealer_name'] = df['dealer_name'].map(dealer_map)
 
 ---
 
-[Output Schema](#output-schema)
+### Output Schema
 
 ### Table: `sales_transactions`
 
@@ -181,7 +180,7 @@ df['dealer_name'] = df['dealer_name'].map(dealer_map)
 
 ---
 
-[Dashboard](#dashboard)
+### Dashboard
 
 The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and provides:
 
@@ -193,7 +192,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 
 ---
 
-[Key Challenges Solved](#key-challenges-solved)
+### Key Challenges Solved
 
 - **Tally's non-tabular export format** — hierarchical voucher/item rows parsed using conditional row-level filtering and `.ffill()` logic; no standard tabular read worked out of the box
 - **Two discount types in the same report** — product-level and voucher-level discounts isolated and computed independently
@@ -204,7 +203,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 ---
 
 
-[Key Insights Enabled](#key-insights-enabled)
+### Key Insights Enabled
 
 - Which dealers have the highest return rates by product category?
 - Are cash discounts being given disproportionately to low-volume dealers?
@@ -214,7 +213,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 
 ---
 
-[Author & Contact](#author--contact)
+### Author & Contact
 
 **Thirumala Reddy**  
 Data Analyst — Nakasa Crop Science Pvt. Ltd.  
