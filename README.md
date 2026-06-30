@@ -9,15 +9,15 @@
 - <a href="#overview">Overview</a>
 - <a href="#Business-Problem">Business Problem</a>
 - <a href="#Dataset">Dataset</a>
-- <a href="#Tools-&-Technologies">Tools & Technologies</a>
+- <a href="#ToolsTechnologies">Tools & Technologies</a>
 - <a href="#Project-Structure">Project Structure</a>
-- <a href="#ETL-Pipeline–How-It-Works">ETL Pipeline – How It Works</a>
-- <a href="#Data Cleaning & Transformation">Data Cleaning & Transformation</a>
-- <a href="#Output Schema">Output Schema</a>
+- <a href="#ETLPipelineHowItWorks">ETL Pipeline – How It Works</a>
+- <a href="#DataCleaningTransformation">Data Cleaning & Transformation</a>
+- <a href="#OutputSchema">Output Schema</a>
 - <a href="#Dashboard">Dashboard</a>
-- <a href="#Key Challenges Solved">Key Challenges Solved</a>
-- <a href="#Key Insights Enabled">Key Insights Enabled</a>
-- <a href="#Author & Contact">Author & Contact</a>
+- <a href="#KeyChallengesSolved">Key Challenges Solved</a>
+- <a href="#KeyInsightsEnabled">Key Insights Enabled</a>
+- <a href="#AuthorContact">Author & Contact</a>
 
 ---
 
@@ -50,7 +50,7 @@ This meant:
 
 ---
 
-<h2><a class="anchor" id="Tools-&-Technologies"></a>Tools & Technologies</h2>
+<h2><a class="anchor" id="ToolsTechnologies"></a>Tools & Technologies</h2>
 
 - **Python** (Pandas, NumPy, SQLAlchemy, os, shutil)
 - **PostgreSQL** (Data warehouse, unified `sales_transactions` table)
@@ -84,7 +84,7 @@ erp-data-analytics-pipeline/
 
 ---
 
-<h2><a class="anchor" id="ETL-Pipeline–How-It-Works"></a>ETL Pipeline – How It Works</h2>
+<h2><a class="anchor" id="ETLPipelineHowItWorks"></a>ETL Pipeline – How It Works</h2>
 
 
 ```
@@ -117,7 +117,7 @@ Each script:
 
 ---
 
-<h2><a class="anchor" id="Data Cleaning & Transformation"></a>Data Cleaning & Transformation</h2>
+<h2><a class="anchor" id="DataCleaningTransformation"></a>Data Cleaning & Transformation</h2>
 
 ### Parsing Tally's Hierarchical Export Format
 
@@ -162,7 +162,7 @@ df['dealer_name'] = df['dealer_name'].map(dealer_map)
 
 ---
 
-<h2><a class="anchor" id="Output Schema"></a>Output Schema</h2>
+<h2><a class="anchor" id="OutputSchema"></a>Output Schema</h2>
 
 ### Table: `sales_transactions`
 
@@ -194,7 +194,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 
 ---
 
-<h2><a class="anchor" id="Key Challenges Solved"></a>Key Challenges Solved</h2>
+<h2><a class="anchor" id="KeyChallengesSolved"></a>Key Challenges Solved</h2>
 
 - **Tally's non-tabular export format** — hierarchical voucher/item rows parsed using conditional row-level filtering and `.ffill()` logic; no standard tabular read worked out of the box
 - **Two discount types in the same report** — product-level and voucher-level discounts isolated and computed independently
@@ -205,7 +205,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 ---
 
 
-<h2><a class="anchor" id="Key Insights Enabled"></a>Key Insights Enabled</h2>
+<h2><a class="anchor" id="KeyInsightsEnabled"></a>Key Insights Enabled</h2>
 
 - Which dealers have the highest return rates by product category?
 - Are cash discounts being given disproportionately to low-volume dealers?
@@ -215,7 +215,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 
 ---
 
-<h2><a class="anchor" id="Author & Contact"></a>Author & Contact</h2>
+<h2><a class="anchor" id="AuthorContact"></a>Author & Contact</h2>
 
 **Thirumala Reddy**  
 Data Analyst — Nakasa Crop Science Pvt. Ltd.  
