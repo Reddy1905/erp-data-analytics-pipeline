@@ -7,7 +7,7 @@
 ## 📌 Table of Contents
 
 - <a href="#overview">Overview</a>
-- <a href="#Business Problem">Business Problem</a>
+- <a href="#Business-Problem">Business Problem</a>
 - <a href="#Dataset">Dataset</a>
 - <a href="#Tools-&-Technologies">Tools & Technologies</a>
 - <a href="#Project-Structure">Project Structure</a>
@@ -29,7 +29,7 @@ This project automates the full data pipeline for **Ananymous Pvt. Ltd.**, an ag
 
 ---
 
-<h2><a class="anchor" id="Business Problem"></a>Business Problem</h2>
+<h2><a class="anchor" id="Business-Problem"></a>Business Problem</h2>
 
 Sales and return data at Ananymous Pvt Ltd lived entirely inside Tally ERP exports — semi-structured Excel files with merged rows, 9-row header offsets, nested voucher-item groupings, and split GST columns. There was no clean, queryable store.
 
