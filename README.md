@@ -189,7 +189,7 @@ The Power BI dashboard (`data_project.pbix`) connects directly to PostgreSQL and
 - Dealer-level volume and return rate analysis
 - Product discount vs. cash discount trend tracking
 - Net revenue estimation after returns
-<img src="images/SalesPerformanceDashboard.png" width="800">
+<img src="Images/SalesPerformanceDashboard.png" width="800">
 
 ---
 
